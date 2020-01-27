@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{A594E23A-0562-4E62-B8D1-467AB6FB5849}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Places", "ConsoleApp1\Places.csproj", "{A594E23A-0562-4E62-B8D1-467AB6FB5849}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{754584BE-C5FC-4B62-B9E1-86FEB7A8A85E}"
 EndProject
