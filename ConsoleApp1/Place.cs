@@ -23,6 +23,7 @@ namespace ConsoleApp1
             PlaceType = type;
             diamonds = 0;
             placePictures = new ArrayList();
+
         }
 
         public string PlaceId
