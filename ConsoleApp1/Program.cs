@@ -10,8 +10,9 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            PlaceAddress placeAddress = new PlaceAddress("Poland", "Warsaw", "Obywatelska", "5", "02-409");
-            Place place = new Place("105-tka", PlaceType.RESTAURANT, placeAddress);
+            var placeAddress = new PlaceAddress("Poland", "Warsaw", "Obywatelska", "5", "02-409");
+            IPlace place = new Place();
+            place.PlaceId;
             DateTime dateTime = DateTime.Now; 
             PlacePicture placePicture = new PlacePicture(place, dateTime);
         }

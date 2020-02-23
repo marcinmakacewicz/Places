@@ -2,16 +2,14 @@
 using System.IO;
 using System.Text;
 
-namespace ConsoleApp1 {
+namespace Places.Models
+{
     public class PlacePicture
     {
-        private static readonly String PLACES_PATH = @"C:\Users\W & M\Documents\PROJEKTY\NicePlace\Places\";
-        private String text;
-        internal Place place;
-        private String pictureFileName;
-
-        public string PictureFileName { get => pictureFileName; set => pictureFileName = value; }
-        public string Text { get => text; set => text = value; }
+        private static readonly string PLACES_PATH = @"C:\Users\W & M\Documents\PROJEKTY\NicePlace\Places\";
+        private Place place;
+        public string PictureFileName { get; set; }
+        public string Text { get; set; }
 
         public void CheckPlaceDirectoryOrCreateIt()
         {
