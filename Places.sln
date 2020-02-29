@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Places", "ConsoleApp1\Place
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{754584BE-C5FC-4B62-B9E1-86FEB7A8A85E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Places.UnitTests", "Places.Tests\Places.UnitTests.csproj", "{A3CB4E2B-35C2-43FF-B447-6C60380032E3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Places.Tests", "Places.Tests\Places.Tests.csproj", "{A3CB4E2B-35C2-43FF-B447-6C60380032E3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

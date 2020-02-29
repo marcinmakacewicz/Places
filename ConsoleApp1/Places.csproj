@@ -45,9 +45,7 @@
   <ItemGroup>
     <Compile Include="DiamondAlreadyAddedException.cs" />
     <Compile Include="DiamondNotAddedException.cs" />
-    <Compile Include="FileGetter.cs" />
     <Compile Include="PlaceAddress.cs" />
-    <Compile Include="PlacePicture.cs" />
     <Compile Include="Place.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

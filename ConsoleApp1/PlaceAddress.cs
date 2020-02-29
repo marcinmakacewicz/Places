@@ -8,19 +8,18 @@ namespace Places
 {
     public class PlaceAddress
     {
-        public String PostCode { get; set; }
-        public String Number { get; set; }
-        public String Street { get; set; }
-        public String City { get; set; }
-        public String Country { get; set; }
+        private string postCode;
+        private string houseNumber;
+        private string street;
+        private string city;
+        private string country;
 
-        
-
-        public String GetPlaceAddress()
+        public PlaceAddress(string Street, string HouseNumber, string City)
         {
-            return Country + City + Street + Number + PostCode;
+            street = Street;
+            HouseNumber = houseNumber;
+            city = City;
         }
 
-        
     }
 }

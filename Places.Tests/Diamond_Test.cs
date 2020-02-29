@@ -3,7 +3,7 @@ using System.Text;
 using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Places.UnitTests
+namespace Places.Tests
 {
     [TestClass]
     public class Diamond_Test
@@ -13,11 +13,21 @@ namespace Places.UnitTests
 
         Restaurant restaurant;
 
+        [TestInitialize]
+        public void TestInitialize()
+        {
+            restaurant = GetRestaurant();
+        }
+
+        private Restaurant GetRestaurant()
+        {
+            var placeAddress = new PlaceAddress("Obywatelska", "5", "Warszawa");
+            return new Restaurant("105-tka", placeAddress);
+        }
+
         [TestMethod]
         public void AddDiamondToRestaurant()
         {
-            restaurant = CreateRestaurantWith0Diamonds();
-
             restaurant.AddDiamond();
 
             Assert.IsTrue(restaurant.GetDiamonds() == ONE_DIAMOND, "Diamond not added");
@@ -25,10 +35,8 @@ namespace Places.UnitTests
 
         [TestMethod]
         [ExpectedException(typeof(DiamondAlreadyAddedException))]
-        public void AddDiamondsTwiceToRestaurant()
+        public void AddDiamondTwiceToRestaurant()
         {
-            restaurant = CreateRestaurantWith0Diamonds();
-
             restaurant.AddDiamond();
             restaurant.AddDiamond();
         }
@@ -36,8 +44,6 @@ namespace Places.UnitTests
         [TestMethod]
         public void RemoveAddedDiamondFromRestaurant()
         {
-            restaurant = CreateRestaurantWith0Diamonds();
-
             restaurant.AddDiamond();
             restaurant.RemoveDiamond();
 
@@ -48,31 +54,8 @@ namespace Places.UnitTests
         [ExpectedException(typeof(DiamondNotAddedException))]
         public void RemoveDiamondFromRestaurantWhenNotAdded()
         {
-            restaurant = CreateRestaurantWith0Diamonds();
-
             restaurant.RemoveDiamond();
         }
-
-        private Restaurant CreateRestaurantWith0Diamonds()
-        {
-            var placeAddress = CreatePlaceAddress();
-            return new Restaurant()
-            {
-                PlaceName = "105-tka",
-                PlaceAddress = placeAddress
-            };
-        }
-
-        private PlaceAddress CreatePlaceAddress()
-        {
-            return new PlaceAddress()
-            {
-                Country = "Poland",
-                City = "Warsaw",
-                Street = "Obywatelska",
-                Number = "5",
-                PostCode = "02-409"
-            };
-        }
+        
     }
 }

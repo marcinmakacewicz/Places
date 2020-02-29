@@ -9,16 +9,17 @@ namespace Places
 {
     public abstract class Place
     {
-        public string PlaceId { get; set; }
-        public string PlaceName { get; set; }
-        public PlaceAddress PlaceAddress { get; set; }
-
+        private string placeId;
+        private string placeName;
+        private PlaceAddress placeAddress;
         private int diamonds;
-        private bool addedDiamond = false;
-        private ICollection<PlacePicture> placePictures;
 
-        public Place()
+        private bool addedDiamond = false;
+
+        public Place(string PlaceName, PlaceAddress PlaceAddress)
         {
+            placeName = PlaceName;
+            placeAddress = PlaceAddress;
             diamonds = 0;
         }
 
@@ -49,11 +50,6 @@ namespace Places
         private bool DiamondAlreadyAdded()
         {
             return addedDiamond;
-        }
-
-        // TODO think what to do
-        public ICollection<PlacePicture> GetPlacePictures() {
-            return placePictures;
         }
 
     }
