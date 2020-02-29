@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Places.Models
+namespace Places
 {
-    public enum PlaceType
+    public class Restaurant : Place
     {
-        RESTAURANT,
-        CINEMA
-    };
+    }
 }
